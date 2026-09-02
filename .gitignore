@@ -30,7 +30,6 @@
 *.zip
 *.tar
 *.tar.gz
-*.mp4
 
 # debug
 npm-debug.log*
