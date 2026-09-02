@@ -14,56 +14,55 @@ export default function Footer() {
               <Image
                 src="/assets/Logo.png"
                 alt="Total Tech Logo"
-                width={150}
-                height={38}
-                className="h-8 w-auto object-contain"
+                width={240}
+                height={60}
+                className="h-10 md:h-12 w-auto object-contain"
               />
             </Link>
             <p className="text-sm text-neutral-400 max-w-sm leading-relaxed">
-              Pioneering futuristic technologies, quantum computing acceleration, and sovereign enterprise AI infrastructure.
+              Total Tech designs and builds custom web platforms, mobile apps, and cloud software for growing companies and modern enterprises.
             </p>
-            <div className="flex items-center gap-3 text-xs text-[#FF1E27]">
-              <span className="w-2 h-2 rounded-full bg-[#FF1E27]" />
-              <span>All Systems Operational</span>
-            </div>
+            <p className="text-xs text-neutral-500">
+              United States &bull; Global Engineering Services
+            </p>
           </div>
 
-          {/* Products */}
+          {/* Services */}
           <div>
             <h4 className="mb-4 text-xs font-bold uppercase tracking-wider text-white">
-              Products
+              Services
             </h4>
             <ul className="space-y-2.5 text-sm">
-              <li><Link href="/products" className="hover:text-[#FF1E27] transition-colors">GPUs & Superchips</Link></li>
-              <li><Link href="/products" className="hover:text-[#FF1E27] transition-colors">AI Enterprise Suite</Link></li>
-              <li><Link href="/products" className="hover:text-[#FF1E27] transition-colors">Networking & Quantum</Link></li>
-              <li><Link href="/products" className="hover:text-[#FF1E27] transition-colors">Edge & Robotics</Link></li>
+              <li><Link href="/services/custom-software-web" className="hover:text-[#FF1E27] transition-colors">Web & Mobile Apps</Link></li>
+              <li><Link href="/services/ai-data-solutions" className="hover:text-[#FF1E27] transition-colors">AI & Automation</Link></li>
+              <li><Link href="/services/cloud-devops" className="hover:text-[#FF1E27] transition-colors">Cloud & DevOps</Link></li>
+              <li><Link href="/services/custom-software-web" className="hover:text-[#FF1E27] transition-colors">Custom CRM & ERP</Link></li>
             </ul>
           </div>
 
-          {/* Developers & Ecosystem */}
+          {/* Resources */}
           <div>
             <h4 className="mb-4 text-xs font-bold uppercase tracking-wider text-white">
-              Developers
+              Resources
             </h4>
             <ul className="space-y-2.5 text-sm">
-              <li><Link href="/docs" className="hover:text-[#FF1E27] transition-colors">Documentation</Link></li>
-              <li><Link href="/developers" className="hover:text-[#FF1E27] transition-colors">Developer Program</Link></li>
-              <li><Link href="/blog" className="hover:text-[#FF1E27] transition-colors">Technical Blog</Link></li>
-              <li><Link href="/community" className="hover:text-[#FF1E27] transition-colors">Community Forums</Link></li>
+              <li><Link href="/blog" className="hover:text-[#FF1E27] transition-colors">Engineering Blog</Link></li>
+              <li><Link href="/services" className="hover:text-[#FF1E27] transition-colors">Tech Capabilities</Link></li>
+              <li><Link href="/contact" className="hover:text-[#FF1E27] transition-colors">Project Estimator</Link></li>
+              <li><Link href="/contact" className="hover:text-[#FF1E27] transition-colors">Request a Consultation</Link></li>
             </ul>
           </div>
 
-          {/* Company & Support */}
+          {/* Company */}
           <div>
             <h4 className="mb-4 text-xs font-bold uppercase tracking-wider text-white">
               Company
             </h4>
             <ul className="space-y-2.5 text-sm">
               <li><Link href="/about" className="hover:text-[#FF1E27] transition-colors">About Us</Link></li>
-              <li><Link href="/careers" className="hover:text-[#FF1E27] transition-colors">Careers <span className="text-[10px] text-[#FF1E27] bg-[#FF1E27]/10 px-1 py-0.5 rounded-xs ml-1 font-semibold">HIRING</span></Link></li>
-              <li><Link href="/contact" className="hover:text-[#FF1E27] transition-colors">Contact Sales</Link></li>
-              <li><Link href="/support" className="hover:text-[#FF1E27] transition-colors">Global Support</Link></li>
+              <li><Link href="/contact" className="hover:text-[#FF1E27] transition-colors">Careers</Link></li>
+              <li><Link href="/contact" className="hover:text-[#FF1E27] transition-colors">Contact Support</Link></li>
+              <li><Link href="/privacy" className="hover:text-[#FF1E27] transition-colors">Privacy Policy</Link></li>
             </ul>
           </div>
         </div>

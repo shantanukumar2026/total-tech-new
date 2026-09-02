@@ -2,7 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
-import { Check, ArrowRight, Zap, Shield, Sparkles } from "lucide-react";
+import { Check, ArrowRight, Zap, Shield } from "lucide-react";
 
 export default function Pricing() {
   const tiers = [

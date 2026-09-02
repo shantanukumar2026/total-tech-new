@@ -2,7 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
-import { Check, ArrowRight, Zap, Shield, Sparkles, Clock, Users, Flame } from "lucide-react";
+import { Check, ArrowRight, Zap, Shield, Clock, Users, Flame } from "lucide-react";
 
 export default function EngagementModels() {
   const models = [

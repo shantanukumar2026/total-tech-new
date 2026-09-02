@@ -100,14 +100,7 @@ export default function Hero() {
   const currentSlide = HERO_SLIDES[currentSlideIndex];
 
   return (
-    <section className="relative min-h-[calc(100vh-68px)] flex items-center bg-gradient-to-b from-[#0b0c10] via-[#101218] to-[#0c0d12] text-white overflow-hidden pt-[110px] lg:pt-[140px] pb-16 lg:pb-24">
-      {/* Soft Ambient Background Glows */}
-      <div className="absolute top-[15%] left-[10%] w-[500px] h-[500px] rounded-full bg-[#FF1E27]/8 blur-[160px] pointer-events-none" />
-      <div className="absolute bottom-[20%] right-[8%] w-[500px] h-[500px] rounded-full bg-slate-500/5 blur-[170px] pointer-events-none" />
-
-      {/* Subtle Grid Pattern */}
-      <div className="absolute inset-0 opacity-[0.035] pointer-events-none bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:28px_28px]" />
-
+    <section className="relative min-h-[calc(100vh-68px)] flex items-center bg-[#0d0e12] text-white overflow-hidden pt-[110px] lg:pt-[130px] pb-16 lg:pb-24 border-b border-neutral-800">
       <div className="relative z-10 max-w-[1780px] w-full mx-auto px-4 sm:px-6 lg:px-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-center">
 
@@ -123,15 +116,15 @@ export default function Hero() {
             </h1>
 
             {/* Description */}
-            <p className="text-base sm:text-lg text-slate-300 max-w-2xl leading-relaxed">
+            <p className="text-lg sm:text-xl text-slate-100 max-w-2xl leading-relaxed font-normal">
               {currentSlide.description}
             </p>
 
             {/* Key Feature Checkpoints */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 pt-2">
               {currentSlide.keyFeatures.map((feat, fIdx) => (
-                <div key={fIdx} className="flex items-center gap-2.5 text-xs sm:text-sm text-slate-200">
-                  <CheckCircle2 className="w-4 h-4 text-[#FF1E27] shrink-0" />
+                <div key={fIdx} className="flex items-center gap-3 text-sm sm:text-base text-white font-medium">
+                  <CheckCircle2 className="w-5 h-5 text-[#FF1E27] shrink-0" />
                   <span>{feat}</span>
                 </div>
               ))}
@@ -194,23 +187,26 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* Right Column: Clean Image Showcase Frame without Badges or Overlays */}
+          {/* Right Column: High-Definition Brand Video Showcase */}
           <div className="lg:col-span-6 relative flex items-center justify-center">
-            <div className="relative w-full aspect-[16/11] sm:aspect-[16/10] rounded-md border border-slate-700/60 bg-slate-950 overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.6)] group">
+            <div className="relative w-full aspect-[16/11] sm:aspect-[16/10] rounded-2xl border border-slate-700 bg-slate-950 overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.6)] group">
 
-              {/* Slide Image */}
-              <Image
-                src={currentSlide.imageSrc}
-                alt={currentSlide.imageAlt}
-                fill
-                priority
-                sizes="(max-width: 1024px) 100vw, 50vw"
-                className="object-cover object-center transition-transform duration-700 group-hover:scale-105"
-              />
+              {/* Brand Video with 123total.png Poster */}
+              <video
+                src="/assets/TOTAL_TECH_24_7_brand_video_202609020829.mp4"
+                poster="/assets/123total.png"
+                autoPlay
+                loop
+                muted
+                playsInline
+                controls
+                className="w-full h-full object-cover object-center"
+              >
+                Your browser does not support the video tag.
+              </video>
 
-              {/* Clean Subtle Gradient & Border */}
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-950/40 via-transparent to-transparent pointer-events-none" />
-              <div className="absolute inset-0 border border-white/5 pointer-events-none" />
+              {/* Subtle Ambient Border */}
+              <div className="absolute inset-0 border border-white/10 pointer-events-none rounded-2xl" />
             </div>
           </div>
         </div>

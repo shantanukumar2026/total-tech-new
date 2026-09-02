@@ -123,7 +123,10 @@
   }
 
   body {
-    font-family: "Questrial", sans-serif;
+    font-family: "Manrope", var(--font-geist-sans), system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
   }
 
   html {

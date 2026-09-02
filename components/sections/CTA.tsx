@@ -2,67 +2,42 @@
 
 import React from "react";
 import Link from "next/link";
-import { ArrowRight, ShieldCheck, Terminal, Building2, FileCheck, Globe } from "lucide-react";
+import { ArrowRight, MessageSquare, Terminal } from "lucide-react";
 
 export default function CTA() {
   return (
-    <section className="relative bg-[#07080b] text-white py-20 border-t border-neutral-800 overflow-hidden">
-      {/* Background glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[300px] bg-[#FF1E27]/8 rounded-full blur-[160px] pointer-events-none" />
+    <section className="bg-[#FF1E27] text-white py-16 sm:py-20 relative overflow-hidden">
+      <div className="max-w-[1720px] 2xl:max-w-[1800px] mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
+        <div className="max-w-4xl mx-auto text-center space-y-6">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/15 border border-white/30 text-white text-xs font-bold uppercase tracking-wider">
+            <MessageSquare className="w-4 h-4" />
+            <span>Let&apos;s Build Your Project</span>
+          </div>
 
-      <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="relative rounded-md border border-neutral-800 bg-[#101217] p-8 sm:p-14 overflow-hidden">
-          
-          <div className="relative z-10 max-w-4xl mx-auto text-center space-y-6">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-xs bg-[#FF1E27]/10 border border-[#FF1E27]/30 text-[#FF1E27] text-xs font-bold uppercase tracking-widest">
-              <Building2 className="w-3.5 h-3.5" />
-              Corporate Engineering Consultation
-            </div>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black tracking-tight text-white leading-tight">
+            Ready to build your next software application?
+          </h2>
 
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-white">
-              Partner with Total Tech for{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FF1E27] via-[#FF5E65] to-white">
-                Enterprise Scale
-              </span>
-            </h2>
+          <p className="text-white/95 text-base sm:text-xl leading-relaxed max-w-2xl mx-auto font-normal">
+            Schedule a conversation with our senior software engineers to review your product ideas, technical architecture, and project budget.
+          </p>
 
-            <p className="text-neutral-300 text-sm sm:text-base leading-relaxed max-w-2xl mx-auto">
-              Schedule an executive discovery session with our Principal Solutions Architects to evaluate architecture roadmaps, security compliance, and dedicated engineering squad allocation.
-            </p>
+          <div className="flex flex-wrap items-center justify-center gap-4 pt-4">
+            <Link
+              href="/contact"
+              className="inline-flex items-center gap-2.5 bg-white hover:bg-slate-100 text-slate-950 text-sm sm:text-base font-bold uppercase tracking-wider px-8 py-4 rounded-md transition-all shadow-xl"
+            >
+              <span>Schedule a Free Consultation</span>
+              <ArrowRight className="w-5 h-5 text-[#FF1E27]" />
+            </Link>
 
-            <div className="flex flex-wrap items-center justify-center gap-4 pt-4">
-              <Link
-                href="/contact"
-                className="inline-flex items-center gap-2 bg-[#FF1E27] hover:bg-[#E0151E] text-white text-xs sm:text-sm font-semibold uppercase tracking-wider px-8 py-3.5 rounded-sm transition-all shadow-[0_0_20px_rgba(255,30,39,0.3)] hover:shadow-[0_0_30px_rgba(255,30,39,0.5)]"
-              >
-                <span>Request Executive Briefing</span>
-                <ArrowRight className="w-4 h-4" />
-              </Link>
-
-              <Link
-                href="/services"
-                className="inline-flex items-center gap-2 bg-[#181a24] hover:bg-[#222533] border border-neutral-700 text-white text-xs sm:text-sm font-medium px-6 py-3.5 rounded-sm transition-all"
-              >
-                <Terminal className="w-4 h-4 text-[#FF1E27]" />
-                <span>Explore Technical Capabilities</span>
-              </Link>
-            </div>
-
-            {/* Corporate Assurances */}
-            <div className="flex flex-wrap items-center justify-center gap-8 pt-8 text-xs text-neutral-400 font-mono border-t border-neutral-800/80">
-              <div className="flex items-center gap-2">
-                <ShieldCheck className="w-4 h-4 text-[#FF1E27]" />
-                <span>Contractual 99.99% SLA</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <FileCheck className="w-4 h-4 text-[#FF1E27]" />
-                <span>100% Client IP Ownership</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Globe className="w-4 h-4 text-[#FF1E27]" />
-                <span>Global Multi-Cloud Footprint</span>
-              </div>
-            </div>
+            <Link
+              href="/services"
+              className="inline-flex items-center gap-2 bg-slate-950 hover:bg-black text-white text-sm sm:text-base font-semibold px-8 py-4 rounded-md border border-white/20 transition-all shadow-md"
+            >
+              <Terminal className="w-4 h-4 text-[#FF5E65]" />
+              <span>Explore All Services</span>
+            </Link>
           </div>
         </div>
       </div>

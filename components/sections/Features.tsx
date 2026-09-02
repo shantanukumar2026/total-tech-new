@@ -4,8 +4,8 @@ import React, { useState } from "react";
 import Link from "next/link";
 import {
   Code2,
-  Sparkles,
-  Bot,
+  Database,
+  Radio,
   Cloud,
   Lock,
   Boxes,
@@ -16,7 +16,6 @@ import {
   BarChart3,
   Workflow,
   Cpu,
-  Radio,
   Activity,
   Network,
   ShieldCheck,
@@ -74,12 +73,12 @@ export const servicesList = [
     id: "ai-data-solutions",
     title: "AI & Data Solutions",
     desc: "Frontier enterprise LLMs, multi-modal computer vision, autonomous AI agents, and real-time big data pipelines.",
-    icon: Sparkles,
+    icon: Database,
     badge: "30x Acceleration",
     subgroups: [
       {
         title: "Artificial Intelligence",
-        icon: Sparkles,
+        icon: Cpu,
         items: [
           "Custom Enterprise LLMs",
           "AI Agents & Automation",
@@ -104,7 +103,7 @@ export const servicesList = [
           "Data Warehousing & BI",
           "Real-Time Data Pipelines",
           "Predictive Analytics",
-          "Reporting Dashboards",
+          "Automated Reporting",
         ],
       },
     ],
@@ -113,9 +112,9 @@ export const servicesList = [
     num: "03",
     id: "robotics-iot",
     title: "Robotics & IoT",
-    desc: "Industrial ROS 2 robotics automation, real-time embedded firmware, and deterministic IoT sensor arrays.",
-    icon: Bot,
-    badge: "Deterministic RTOS",
+    desc: "GPU-accelerated ROS 2 simulation, industrial robotics control, edge computing, and real-time IoT sensor arrays.",
+    icon: Radio,
+    badge: "Deterministic SLA",
     subgroups: [
       {
         title: "Industrial Automation",
@@ -259,7 +258,7 @@ export const servicesList = [
       },
       {
         title: "Emerging Tech",
-        icon: Sparkles,
+        icon: Workflow,
         items: [
           "Digital Twins",
           "Smart Automation",

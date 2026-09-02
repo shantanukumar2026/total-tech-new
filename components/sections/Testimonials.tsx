@@ -17,7 +17,7 @@ export default function Testimonials() {
     },
     {
       quote:
-        "Their automated OCR and document classification AI pipeline saved our operations team over 120 hours each week. The system has run with zero downtime since day one.",
+        "Their automated OCR and document classification AI pipeline saved our operations team over 120 hours each week. The system has run with zero uptime degradation since day one.",
       name: "Elena Rostova",
       role: "Chief Operating Officer",
       company: "Vanguard Logistics Global",
@@ -36,60 +36,64 @@ export default function Testimonials() {
   ];
 
   return (
-    <section className="bg-[#0b0c10] text-white py-20 border-t border-neutral-800 relative">
-      <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="bg-[#090b10] text-white py-20 lg:py-24 border-t border-neutral-800/90 relative overflow-hidden">
+      {/* Background ambient glow */}
+      <div className="absolute top-1/2 left-1/3 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-[#FF1E27]/5 rounded-full blur-[160px] pointer-events-none" />
+
+      <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Title */}
-        <div className="max-w-2xl mb-12">
-          <p className="text-xs font-bold uppercase tracking-wider text-[#FF1E27] mb-2">
+        <div className="max-w-2xl mb-14">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#FF1E27]/10 border border-[#FF1E27]/30 text-[#FF1E27] text-xs font-bold uppercase tracking-wider mb-3">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#FF1E27]" />
             Client Success & Reviews
-          </p>
-          <h2 className="text-3xl sm:text-4xl font-bold text-white tracking-tight">
-            Trusted by tech leaders and fast-growing teams.
+          </div>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight leading-tight">
+            Trusted by tech leaders and enterprise engineering teams.
           </h2>
-          <p className="mt-3 text-sm sm:text-base text-neutral-400 leading-relaxed">
-            Here is what engineering managers and founders say about collaborating directly with Total Tech.
+          <p className="mt-4 text-base sm:text-lg text-slate-400 leading-relaxed">
+            Here is what engineering leaders and founders report when collaborating directly with Total Tech principal architects.
           </p>
         </div>
 
         {/* 3 Review Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
           {testimonials.map((item, idx) => (
             <div
               key={idx}
-              className="flex flex-col justify-between p-6 rounded-md bg-[#12141a] border border-neutral-800 hover:border-neutral-700 transition-colors relative"
+              className="flex flex-col justify-between p-7 rounded-lg bg-[#11131a] border border-neutral-800 hover:border-[#FF1E27]/50 hover:shadow-[0_8px_30px_rgba(255,30,39,0.12)] transition-all duration-300 relative group"
             >
               <div>
                 {/* Rating & Metric Badge */}
-                <div className="flex items-center justify-between mb-4">
+                <div className="flex items-center justify-between mb-5">
                   <div className="flex items-center gap-1 text-[#FF1E27]">
                     {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-3.5 h-3.5 fill-[#FF1E27]" />
+                      <Star key={i} className="w-4 h-4 fill-[#FF1E27]" />
                     ))}
                   </div>
-                  <span className="text-[10px] font-mono font-semibold px-2 py-0.5 rounded-xs bg-[#FF1E27]/10 text-[#FF1E27] border border-[#FF1E27]/20">
+                  <span className="text-[11px] font-mono font-bold px-2.5 py-1 rounded-xs bg-[#FF1E27]/10 text-[#FF1E27] border border-[#FF1E27]/30 shadow-xs">
                     {item.metric}
                   </span>
                 </div>
 
                 {/* Quote */}
-                <p className="text-sm text-neutral-300 leading-relaxed italic mb-6">
+                <p className="text-sm sm:text-base text-slate-200 leading-relaxed italic mb-8">
                   &ldquo;{item.quote}&rdquo;
                 </p>
               </div>
 
               {/* Author Info */}
-              <div className="pt-4 border-t border-neutral-800/80 flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-neutral-800 border border-neutral-700 flex items-center justify-center font-bold text-xs text-white">
+              <div className="pt-5 border-t border-neutral-800/90 flex items-center gap-3.5">
+                <div className="w-11 h-11 rounded-full bg-neutral-800 border border-neutral-700 flex items-center justify-center font-bold text-xs text-white shadow-inner">
                   {item.avatar}
                 </div>
                 <div>
-                  <h4 className="text-sm font-semibold text-white flex items-center gap-1.5">
+                  <h4 className="text-sm font-bold text-white flex items-center gap-1.5">
                     <span>{item.name}</span>
                     <CheckCircle2 className="w-3.5 h-3.5 text-[#FF1E27]" />
                   </h4>
-                  <p className="text-xs text-neutral-400">
-                    {item.role} &bull; <span className="text-neutral-300">{item.company}</span>
+                  <p className="text-xs text-slate-400">
+                    {item.role} &bull; <span className="text-slate-300 font-medium">{item.company}</span>
                   </p>
                 </div>
               </div>

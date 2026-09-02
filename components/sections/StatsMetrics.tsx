@@ -1,33 +1,33 @@
 "use client";
 
 import React from "react";
-import { TrendingUp, ShieldCheck, Zap, Server, Award, Users } from "lucide-react";
+import { ShieldCheck, Zap, Server, Users, Award, Clock } from "lucide-react";
 
 export default function StatsMetrics() {
   const stats = [
     {
-      value: "99.99%",
-      label: "Uptime & Reliability SLA",
-      description: "Mission-critical architectures with zero-downtime redundancy",
-      icon: ShieldCheck,
-    },
-    {
-      value: "4.5x",
-      label: "Faster Execution & Latency",
-      description: "Optimized serverless & distributed cloud response speeds",
-      icon: Zap,
-    },
-    {
       value: "250+",
-      label: "Enterprise Deployments",
-      description: "Successfully shipped web apps, AI pipelines, & cloud systems",
+      label: "Projects Delivered",
+      description: "Custom web applications, mobile apps, and cloud platforms shipped on schedule.",
       icon: Server,
     },
     {
+      value: "99.9%",
+      label: "Uptime & Reliability",
+      description: "Tested cloud architectures built to keep your operations running 24/7.",
+      icon: ShieldCheck,
+    },
+    {
       value: "100%",
-      label: "Senior Engineering Staff",
-      description: "Direct collaboration with principal developers & architects",
+      label: "In-House Senior Team",
+      description: "Work directly with experienced developers and architects—no outsourced handoffs.",
       icon: Users,
+    },
+    {
+      value: "10+ Yrs",
+      label: "Industry Experience",
+      description: "Proven track record building modern, scalable software across various industries.",
+      icon: Clock,
     },
   ];
 
@@ -50,11 +50,11 @@ export default function StatsMetrics() {
                     <Icon className="w-5 h-5" />
                   </div>
                   <span className="text-[11px] font-mono uppercase tracking-wider text-neutral-500 font-medium">
-                    Metric 0{idx + 1}
+                    0{idx + 1}
                   </span>
                 </div>
 
-                <div className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight font-mono mb-1 text-transparent bg-clip-text bg-gradient-to-r from-white via-neutral-100 to-neutral-400 group-hover:from-white group-hover:to-[#FFA0A4] transition-all">
+                <div className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight font-mono mb-1 text-transparent bg-clip-text bg-gradient-to-r from-white via-neutral-100 to-neutral-300 group-hover:from-white group-hover:to-[#FFA0A4] transition-all">
                   {item.value}
                 </div>
 

@@ -13,11 +13,9 @@ import {
   User,
   Cpu,
   Layers,
-  Sparkles,
   Server,
   Terminal,
   ArrowRight,
-  Bot,
   Laptop,
   ShieldCheck,
   Zap,
@@ -86,7 +84,7 @@ export const servicesMegaMenuData: ServiceCategory[] = [
         title: "Web & Applications",
         icon: Laptop,
         items: [
-          { name: "Next.js & React Enterprise", badge: "Modern" },
+          { name: "Next.js & React Enterprise" },
           { name: "Node.js & Python Backend" },
           { name: "Modern Web Platforms" },
           { name: "API & Microservices" },
@@ -98,7 +96,7 @@ export const servicesMegaMenuData: ServiceCategory[] = [
         items: [
           { name: "iOS Apps (Swift)" },
           { name: "Android Apps (Kotlin)" },
-          { name: "Cross-Platform Mobile", badge: "Flutter/RN" },
+          { name: "Cross-Platform Mobile" },
           { name: "Enterprise Apps" },
         ],
       },
@@ -131,13 +129,13 @@ export const servicesMegaMenuData: ServiceCategory[] = [
     num: "02",
     title: "AI & Data Solutions",
     shortDesc: "Custom enterprise LLMs, multi-modal vision systems, and automated real-time data pipelines.",
-    icon: Sparkles,
+    icon: Database,
     sections: [
       {
         title: "Artificial Intelligence",
-        icon: Sparkles,
+        icon: Cpu,
         items: [
-          { name: "Custom Enterprise LLMs", badge: "Titan AI" },
+          { name: "Custom Enterprise LLMs" },
           { name: "AI Agents & Automation" },
           { name: "Document Intelligence" },
           { name: "Model Integration & Fine-tuning" },
@@ -148,7 +146,7 @@ export const servicesMegaMenuData: ServiceCategory[] = [
         icon: Eye,
         items: [
           { name: "Object Detection" },
-          { name: "Visual Quality Inspection", badge: "Industrial" },
+          { name: "Visual Quality Inspection" },
           { name: "OCR & Document Scanning" },
           { name: "Image Recognition & Segmentation" },
         ],
@@ -182,14 +180,14 @@ export const servicesMegaMenuData: ServiceCategory[] = [
     num: "03",
     title: "Robotics & IoT",
     shortDesc: "ROS 2 robotics software, industrial automation, edge computing, and smart IoT sensor networks.",
-    icon: Bot,
+    icon: Radio,
     sections: [
       {
         title: "Industrial Automation",
         icon: Workflow,
         items: [
           { name: "Warehouse Automation" },
-          { name: "Robotics Software (ROS 2)", badge: "ROS 2" },
+          { name: "Robotics Software (ROS 2)" },
           { name: "Machine Integration" },
           { name: "Automated Logistics" },
         ],
@@ -208,7 +206,7 @@ export const servicesMegaMenuData: ServiceCategory[] = [
         title: "IoT Networks",
         icon: Radio,
         items: [
-          { name: "Industrial IoT (IIoT)", badge: "Edge" },
+          { name: "Industrial IoT (IIoT)" },
           { name: "Smart Sensor Arrays" },
           { name: "Fleet Telematics" },
           { name: "Facility Monitoring & Digital Twins" },
@@ -240,7 +238,7 @@ export const servicesMegaMenuData: ServiceCategory[] = [
         icon: Cloud,
         items: [
           { name: "AWS, Azure & Google Cloud" },
-          { name: "Kubernetes & Docker", badge: "K8s" },
+          { name: "Kubernetes & Docker" },
           { name: "Serverless Systems" },
           { name: "Hybrid Cloud Setup" },
         ],
@@ -251,7 +249,7 @@ export const servicesMegaMenuData: ServiceCategory[] = [
         items: [
           { name: "Automated Deployment" },
           { name: "Infrastructure as Code (IaC)" },
-          { name: "24/7 Monitoring & SRE", badge: "24/7" },
+          { name: "24/7 Monitoring & SRE" },
           { name: "Disaster Recovery" },
         ],
       },
@@ -291,7 +289,7 @@ export const servicesMegaMenuData: ServiceCategory[] = [
         icon: ShieldCheck,
         items: [
           { name: "Penetration Testing" },
-          { name: "Vulnerability Assessments", badge: "SecOps" },
+          { name: "Vulnerability Assessments" },
           { name: "Security Auditing" },
           { name: "Static & Dynamic Code Review" },
         ],
@@ -310,7 +308,7 @@ export const servicesMegaMenuData: ServiceCategory[] = [
         title: "Compliance & Risk",
         icon: FileCheck,
         items: [
-          { name: "SOC2 Type II Readiness", badge: "SOC2" },
+          { name: "SOC2 Type II Readiness" },
           { name: "ISO 27001 Compliance" },
           { name: "HIPAA Security" },
           { name: "Data Privacy (GDPR/CCPA)" },
@@ -341,7 +339,7 @@ export const servicesMegaMenuData: ServiceCategory[] = [
         title: "Business Platforms",
         icon: Briefcase,
         items: [
-          { name: "ERP Cloud Integration", badge: "Enterprise" },
+          { name: "ERP Cloud Integration" },
           { name: "Enterprise CRM Setup" },
           { name: "ERP Customization" },
           { name: "Supply Chain Tech" },
@@ -359,9 +357,9 @@ export const servicesMegaMenuData: ServiceCategory[] = [
       },
       {
         title: "Emerging Tech",
-        icon: Sparkles,
+        icon: Workflow,
         items: [
-          { name: "Digital Twins", badge: "Innovation" },
+          { name: "Digital Twins" },
           { name: "Smart Automation" },
           { name: "Web3 & Blockchain" },
           { name: "Green IT Solutions" },
@@ -475,12 +473,12 @@ export default function Navbar() {
 
       {/* Main Navigation Bar */}
       <div className="max-w-[1780px] mx-auto px-4 sm:px-6 lg:px-10">
-        <div className="flex items-center justify-between h-[68px]">
+        <div className="flex items-center justify-between h-[76px] lg:h-[84px]">
           {/* Left Section: Brand Logo */}
           <div className="flex items-center gap-6 lg:gap-10">
             <Link
               href="/"
-              className="flex items-center gap-3 group focus:outline-none shrink-0"
+              className="flex items-center gap-3 group focus:outline-none shrink-0 py-1"
               onClick={() => {
                 setSearchOpen(false);
                 setMobileMenuOpen(false);
@@ -491,9 +489,9 @@ export default function Navbar() {
                 <Image
                   src="/assets/Logo.png"
                   alt="Total Tech Logo"
-                  width={150}
-                  height={38}
-                  className="h-8 md:h-9 w-auto object-contain transition-transform duration-200 group-hover:scale-[1.02]"
+                  width={260}
+                  height={68}
+                  className="h-10 sm:h-11 md:h-12 lg:h-14 w-auto object-contain transition-transform duration-200 group-hover:scale-105"
                   priority
                 />
               </div>
@@ -639,47 +637,35 @@ export default function Navbar() {
                       type="button"
                       onMouseEnter={() => setActiveCategoryId(cat.id)}
                       onClick={() => setActiveCategoryId(cat.id)}
-                      className={`w-full text-left p-4 rounded-md transition-all flex items-center justify-between group cursor-pointer border ${
-                        isActive
-                          ? "bg-[#202738] border-l-4 border-l-[#FF1E27] border-y-[#36425c] border-r-[#36425c] text-white shadow-lg"
-                          : "bg-[#161c28] border-[#242d3e] hover:bg-[#1d2434] hover:border-[#36425c] text-slate-200"
-                      }`}
+                      className={`w-full text-left p-4 rounded-md transition-all flex items-center justify-between group cursor-pointer border ${isActive
+                        ? "bg-[#202738] border-l-4 border-l-[#FF1E27] border-y-[#36425c] border-r-[#36425c] text-white shadow-lg"
+                        : "bg-[#161c28] border-[#242d3e] hover:bg-[#1d2434] hover:border-[#36425c] text-slate-200"
+                        }`}
                     >
-                      <div className="flex items-center gap-3.5">
-                        <div
-                          className={`p-2.5 rounded-sm transition-colors ${
-                            isActive
-                              ? "bg-[#FF1E27]/25 text-[#FF1E27]"
-                              : "bg-[#1f2636] text-slate-300 group-hover:text-white"
-                          }`}
-                        >
-                          <IconComp className="w-5 h-5" />
-                        </div>
+                      <div className="flex items-center gap-3">
                         <div>
                           <div className="flex items-center gap-2">
-                            <span className="text-xs font-mono font-bold text-[#FF1E27]">
+                            <span className="text-xs font-mono font-bold text-[#FF1E27] bg-[#FF1E27]/10 px-1.5 py-0.5 rounded-xs border border-[#FF1E27]/20">
                               {cat.num}
                             </span>
                             <span
-                              className={`text-[15px] font-bold tracking-wide ${
-                                isActive ? "text-white" : "text-slate-100"
-                              }`}
+                              className={`text-[15px] font-bold tracking-wide ${isActive ? "text-white" : "text-slate-100"
+                                }`}
                             >
                               {cat.title}
                             </span>
                           </div>
-                          <p className="text-xs text-slate-400 line-clamp-1 mt-0.5 max-w-[260px]">
+                          <p className="text-xs text-slate-400 line-clamp-1 mt-1 max-w-[280px]">
                             {cat.shortDesc}
                           </p>
                         </div>
                       </div>
 
                       <ChevronRight
-                        className={`w-4 h-4 transition-transform duration-200 shrink-0 ${
-                          isActive
-                            ? "text-[#FF1E27] translate-x-1"
-                            : "text-slate-500 group-hover:text-slate-300"
-                        }`}
+                        className={`w-4 h-4 transition-transform duration-200 shrink-0 ${isActive
+                          ? "text-[#FF1E27] translate-x-1"
+                          : "text-slate-500 group-hover:text-slate-300"
+                          }`}
                       />
                     </button>
                   );
@@ -689,17 +675,14 @@ export default function Navbar() {
               {/* 2. Submenu: 3 Subsections with larger fonts, bright white text & gray hover background */}
               <div className="col-span-8 grid grid-cols-3 gap-6 pl-2">
                 {activeCategory.sections.map((sub, idx) => {
-                  const SubIcon = sub.icon;
                   return (
                     <div
                       key={idx}
                       className="p-5 rounded-md bg-[#161c28] border border-[#262f42] space-y-4"
                     >
-                      {/* Section Title with Icon */}
-                      <div className="flex items-center gap-2.5 pb-3 border-b border-[#283246]">
-                        <div className="p-1.5 rounded-sm bg-[#222a3b] text-[#FF1E27]">
-                          <SubIcon className="w-4 h-4" />
-                        </div>
+                      {/* Section Title */}
+                      <div className="flex items-center gap-2 pb-3 border-b border-[#283246]">
+                        <div className="w-1.5 h-3.5 bg-[#FF1E27] rounded-xs shrink-0" />
                         <h4 className="text-sm font-extrabold uppercase tracking-wider text-white">
                           {sub.title}
                         </h4>
@@ -718,12 +701,6 @@ export default function Navbar() {
                                 <span className="w-2 h-2 rounded-full bg-[#FF1E27] shrink-0" />
                                 <span className="font-semibold text-[13.5px] leading-snug">{item.name}</span>
                               </span>
-
-                              {item.badge && (
-                                <span className="text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 bg-[#FF1E27]/20 text-[#FF4D54] border border-[#FF1E27]/35 rounded-xs shrink-0 ml-1.5">
-                                  {item.badge}
-                                </span>
-                              )}
                             </Link>
                           </li>
                         ))}
@@ -795,7 +772,6 @@ export default function Navbar() {
               <div className="space-y-2 mt-1">
                 {servicesMegaMenuData.map((cat) => {
                   const isCatOpen = mobileActiveCategory === cat.id;
-                  const IconComp = cat.icon;
 
                   return (
                     <div key={cat.id} className="border border-[#1f1f1f] rounded-xs overflow-hidden bg-[#0d0d0d]">
@@ -806,9 +782,9 @@ export default function Navbar() {
                         }
                         className="w-full flex items-center justify-between p-3 text-left font-semibold text-sm text-neutral-200 hover:text-white"
                       >
-                        <div className="flex items-center gap-2.5">
-                          <IconComp className="w-4 h-4 text-[#FF1E27]" />
-                          <span>{cat.num}. {cat.title}</span>
+                        <div className="flex items-center gap-2">
+                          <span className="text-[#FF1E27] font-mono text-xs">{cat.num}.</span>
+                          <span>{cat.title}</span>
                         </div>
                         <ChevronDown
                           className={`w-4 h-4 text-neutral-500 transition-transform ${isCatOpen ? "rotate-180 text-[#FF1E27]" : ""

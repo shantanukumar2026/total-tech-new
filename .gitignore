@@ -24,6 +24,14 @@
 .DS_Store
 *.pem
 
+# ui design files & large downloads
+/ui-designs/
+*.download
+*.zip
+*.tar
+*.tar.gz
+*.mp4
+
 # debug
 npm-debug.log*
 yarn-debug.log*

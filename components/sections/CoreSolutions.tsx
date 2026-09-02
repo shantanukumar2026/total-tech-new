@@ -19,97 +19,97 @@ interface SolutionItem {
 const SOLUTIONS: SolutionItem[] = [
   {
     id: "web-mobile",
-    category: "Software Development",
+    category: "Web & Mobile",
     title: "Custom Web & Mobile Apps",
     description:
-      "Modern web applications, internal tools, and iOS/Android mobile apps built to support your daily operations.",
+      "Fast, responsive web applications, customer portals, and native iOS & Android apps built for performance and growth.",
     imageSrc: "/assets/web-app/gettyimages-2226999346-1024x1024.jpg",
     imageAlt: "Custom Web and Mobile Applications",
     features: [
-      "Next.js & React web platforms",
-      "Native iOS & Android apps",
-      "Customer portals & dashboards",
-      "API & third-party integrations",
+      "Modern React & Next.js platforms",
+      "Native iOS & Android mobile apps",
+      "Customer portals & admin dashboards",
+      "REST & GraphQL API integrations",
     ],
     ctaHref: "/services/custom-software-web",
   },
   {
     id: "ai-workflows",
-    category: "Automation & Data",
-    title: "AI & Workflow Automation",
+    category: "AI & Automation",
+    title: "AI Tools & Workflow Automation",
     description:
-      "Automate repetitive daily tasks, organize business documents, and integrate AI tools that help your team work faster.",
+      "Automate repetitive daily workflows, process business documents, and integrate smart tools that help your team work faster.",
     imageSrc: "/assets/web-app/gettyimages-2281055229-1024x1024.jpg",
     imageAlt: "AI and Workflow Automation",
     features: [
-      "Custom AI assistants and search",
-      "Document scanning and OCR extraction",
-      "Automated business pipelines",
-      "Custom reporting dashboards",
+      "Custom internal search & AI assistants",
+      "Automated document processing & OCR",
+      "Data extraction & automated reports",
+      "Workflow integration with your tools",
     ],
     ctaHref: "/services/ai-data-solutions",
   },
   {
     id: "cloud-ops",
-    category: "Cloud & Infrastructure",
-    title: "Cloud Setup & DevOps",
+    category: "Cloud & DevOps",
+    title: "Cloud Infrastructure & DevOps",
     description:
-      "Reliable cloud architecture on AWS, Azure, or GCP with automated backups, monitoring, and Devops controls.",
+      "Reliable cloud setup on AWS, Google Cloud, or Azure with automated deployments, daily backups, and 24/7 monitoring.",
     imageSrc: "/assets/web-app/gettyimages-2262805356-1024x1024.jpg",
     imageAlt: "Cloud Infrastructure and DevOps",
     features: [
-      "Cloud migration (AWS, Azure, GCP)",
-      "Daily automated backups",
-      "24/7 server monitoring",
-      "Security compliance & access control",
+      "Cloud setup (AWS, GCP, Azure)",
+      "Automated CI/CD deployment pipelines",
+      "24/7 uptime monitoring & backups",
+      "Secure role-based access control",
     ],
     ctaHref: "/services/cloud-devops",
   },
   {
-    id: "Crm And erp",
-    category: "Software Development",
-    title: "Custom crm & erp",
+    id: "crm-erp",
+    category: "Business Systems",
+    title: "Custom CRM & ERP Systems",
     description:
-      "Modern web applications, internal tools, and iOS/Android mobile apps built to support your daily operations.",
+      "Tailored operational platforms, sales pipelines, and billing systems designed around your exact business processes.",
     imageSrc: "/assets/web-app/gettyimages-2264962187-1024x1024.jpg",
-    imageAlt: "Custom Web and Mobile Applications",
+    imageAlt: "Custom CRM and ERP Enterprise Systems",
     features: [
-      "Contact Management",
-      "Sales Pipeline Tracking",
-      "Marketing Automation",
-      "Customer Support",
+      "Client & lead tracking pipelines",
+      "Billing & invoicing automation",
+      "Inventory & resource management",
+      "Custom analytics & reporting",
     ],
     ctaHref: "/services/custom-software-web",
   },
   {
-    id: "Robotics And IoT",
-    category: "Robotics And IoT",
-    title: "Robotics And IoT",
+    id: "robotics-iot",
+    category: "IoT & Hardware",
+    title: "IoT & Connected Device Software",
     description:
-      "Modern web applications, internal tools, and iOS/Android mobile apps built to support your daily operations.",
+      "Remote device dashboards, sensor data telemetry, and firmware connectivity built for real-time monitoring.",
     imageSrc: "/assets/web-app/gettyimages-2264299087-1024x1024.jpg",
-    imageAlt: "Robotics And IoT",
+    imageAlt: "Robotics and IoT Industrial Systems",
     features: [
-      "Remote Monitoring and Control",
-      "Sensors and Data Fusion",
-      "Autonomous Decision-Making",
-      "Predictive Maintenance",
+      "Live sensor dashboards & alerts",
+      "Remote device management",
+      "Data logging & telemetry",
+      "Predictive equipment maintenance",
     ],
     ctaHref: "/services/custom-software-web",
   },
   {
-    id: "Cyber Security",
-    category: "Cyber Security",
-    title: "Cyber Security",
+    id: "cyber-security",
+    category: "Security & Compliance",
+    title: "Security & Data Protection",
     description:
-      "Modern web applications, internal tools, and iOS/Android mobile apps built to support your daily operations.",
+      "Security audits, vulnerability scans, and encryption to ensure your software meets modern privacy and compliance standards.",
     imageSrc: "/assets/web-app/gettyimages-1038838928-1024x1024.jpg",
-    imageAlt: "Cyber Security",
+    imageAlt: "Enterprise Cybersecurity & Zero Trust",
     features: [
-      "Network Security and Intrusion Detection",
-      "Endpoint Protection and Antivirus Solutions",
-      "Security Audits and Vulnerability Assessments",
-      "Data Encryption and Privacy Compliance",
+      "Vulnerability & code security audits",
+      "End-to-end data encryption",
+      "SOC 2 & ISO compliance readiness",
+      "Access control & security logging",
     ],
     ctaHref: "/services/custom-software-web",
   },
@@ -117,28 +117,29 @@ const SOLUTIONS: SolutionItem[] = [
 
 export default function CoreSolutions() {
   return (
-    <section className="bg-[#090a0d] text-white py-20 border-t border-neutral-800">
-      <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="bg-[#090a0d] text-white py-14 lg:py-18 border-t border-neutral-800">
+      <div className="max-w-[1720px] 2xl:max-w-[1800px] mx-auto px-6 sm:px-8 lg:px-12">
 
         {/* Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
-          <div className="max-w-xl">
-            <p className="text-xs font-bold uppercase tracking-wider text-[#FF1E27] mb-2">
-              Our Services
-            </p>
-            <h2 className="text-3xl sm:text-4xl font-bold text-white tracking-tight">
-              What we build for our clients.
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+          <div className="max-w-2xl">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#FF1E27]/10 border border-[#FF1E27]/30 text-[#FF1E27] text-xs font-bold uppercase tracking-wider mb-3">
+              <span className="w-2 h-2 rounded-full bg-[#FF1E27]" />
+              What We Do &bull; Core Capabilities
+            </div>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight leading-tight">
+              Software & Technology Solutions We Build
             </h2>
-            <p className="mt-2 text-sm sm:text-base text-neutral-400">
-              Straightforward technology services designed to solve specific business needs.
+            <p className="mt-4 text-base sm:text-lg text-neutral-200 leading-relaxed font-normal">
+              We design and build custom web platforms, mobile apps, smart automation tools, and secure cloud systems tailored to your business.
             </p>
           </div>
 
           <Link
             href="/services"
-            className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#FF1E27] hover:underline"
+            className="inline-flex items-center gap-2 text-sm sm:text-base font-bold text-[#FF5E65] hover:text-[#FF1E27] transition-colors self-start md:self-end"
           >
-            <span>View all services</span>
+            <span>View all software services</span>
             <ArrowRight className="w-4 h-4" />
           </Link>
         </div>
@@ -148,7 +149,7 @@ export default function CoreSolutions() {
           {SOLUTIONS.map((item) => (
             <div
               key={item.id}
-              className="rounded-md bg-[#12141a] border border-neutral-800 overflow-hidden flex flex-col justify-between"
+              className="rounded-xl bg-[#141721] border border-neutral-700 overflow-hidden flex flex-col justify-between"
             >
               <div>
                 {/* Image */}
@@ -164,20 +165,20 @@ export default function CoreSolutions() {
 
                 {/* Content */}
                 <div className="p-6">
-                  <span className="text-[11px] font-semibold uppercase tracking-wider text-[#FF1E27]">
+                  <span className="text-xs font-bold uppercase tracking-wider text-[#FF5E65]">
                     {item.category}
                   </span>
-                  <h3 className="text-lg font-bold text-white mt-1 mb-2">
+                  <h3 className="text-xl font-bold text-white mt-1 mb-2 leading-snug">
                     {item.title}
                   </h3>
-                  <p className="text-sm text-neutral-400 leading-relaxed">
+                  <p className="text-sm sm:text-base text-neutral-300 leading-relaxed">
                     {item.description}
                   </p>
 
-                  <ul className="mt-5 space-y-2 pt-4 border-t border-neutral-800/80">
+                  <ul className="mt-5 space-y-2.5 pt-4 border-t border-neutral-800">
                     {item.features.map((feat, fIdx) => (
-                      <li key={fIdx} className="flex items-center gap-2 text-xs sm:text-sm text-neutral-300">
-                        <Check className="w-3.5 h-3.5 text-[#FF1E27] shrink-0" />
+                      <li key={fIdx} className="flex items-center gap-2.5 text-sm sm:text-base text-neutral-200">
+                        <Check className="w-4 h-4 text-[#FF1E27] shrink-0" />
                         <span>{feat}</span>
                       </li>
                     ))}
@@ -189,7 +190,7 @@ export default function CoreSolutions() {
               <div className="p-6 pt-0">
                 <Link
                   href={item.ctaHref}
-                  className="inline-flex items-center justify-center w-full py-2.5 px-4 rounded-sm bg-neutral-800 hover:bg-[#FF1E27] text-white text-xs font-semibold uppercase tracking-wider transition-colors"
+                  className="inline-flex items-center justify-center w-full py-3 px-4 rounded-md bg-neutral-800 hover:bg-[#FF1E27] text-white text-xs sm:text-sm font-bold uppercase tracking-wider transition-colors shadow-sm"
                 >
                   Learn More
                 </Link>
